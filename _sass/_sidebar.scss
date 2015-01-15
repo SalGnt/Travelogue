@@ -1,0 +1,70 @@
+/* ==========================================================================
+   SIDEBAR
+   ========================================================================== */
+
+.sb-slidebar {
+    background-color: $dark-color;
+    color: $text-color-light;
+    letter-spacing: 1px;
+    overflow: hidden;
+
+    .site-title {
+        font-size: 22px;
+        letter-spacing: 2px;
+        margin: 0;
+        padding: $spacing-unit ($spacing-unit / 3);
+    }
+
+    .site-info {
+        bottom: 0;
+        font-family: $base-font-family-sans;
+        font-size: 12px;
+        line-height: 2;
+        padding: $spacing-unit / 4 0;
+        position: absolute;
+        text-align: center;
+        width: 100%;
+
+        p {
+            margin: 0;
+        }
+    }
+
+    .sb-menu {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+
+        .active {
+            a {
+                background-color: rgba($light-color, .04);
+            }
+        }
+
+        > li {
+            border-top: 1px solid rgba($light-color, .05);
+            margin: 0;
+            padding: 0;
+            position: relative;
+            width: 100%;
+
+            &:last-child {
+                border-bottom: 1px solid rgba($light-color, .05);
+            }
+
+            a {
+                color: $text-color-light;
+                font-family: $base-font-family-sans;
+                display: inline-block;
+                padding: ($spacing-unit / 3);
+                width: 100%;
+
+                &:hover {
+                    background-color: $light-color;
+                    color: $text-color;
+                    text-decoration: none;
+                }
+            }
+        }
+    }
+}

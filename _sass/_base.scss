@@ -1,0 +1,213 @@
+/* ==========================================================================
+   BASE
+   ========================================================================== */
+
+/**
+ * Reset some basic elements
+ */
+body, h1, h2, h3, h4, h5, h6,
+p, blockquote, pre, hr,
+dl, dd, ol, ul, figure {
+    margin: 0;
+    padding: 0;
+}
+
+
+
+/**
+ * Basic styling
+ */
+body {
+    background: $grey-color-dark url("/assets/images/dark-green-canvas.jpg") repeat;
+    color: $text-color;
+    font-family: $base-font-family;
+    font-size: $base-font-size;
+    font-weight: 400;
+    line-height: $base-line-height;
+
+    -webkit-text-size-adjust: 100%;
+}
+
+
+
+/**
+ * Set `margin-bottom` to maintain vertical rhythm
+ */
+h1, h2, h3, h4, h5, h6,
+p, blockquote, pre,
+ul, ol, dl, figure,
+%vertical-rhythm {
+    margin-bottom: $spacing-unit / 2;
+}
+
+
+
+/**
+ * Images
+ */
+img {
+    display: block;
+    height: auto;
+    margin: auto;
+    max-width: 100%;
+    vertical-align: middle;
+    width: auto;
+}
+
+
+
+/**
+ * Figures
+ */
+figure > img {
+    display: block;
+}
+
+figcaption {
+    font-size: $small-font-size;
+}
+
+
+
+/**
+ * Lists
+ */
+ul, ol {
+    margin-left: $spacing-unit;
+}
+
+li {
+    > ul,
+    > ol {
+         margin-bottom: 0;
+    }
+}
+
+
+
+/**
+ * Headings
+ */
+h1, h2, h3, h4, h5, h6 {
+    font-weight: 400;
+}
+
+
+
+/**
+ * Links
+ */
+a {
+    color: $brand-color;
+    text-decoration: none;
+
+    @include transition($transition-base);
+
+    &:visited {
+        color: darken($brand-color, 15%);
+    }
+
+    &:hover {
+        color: $grey-color;
+        // text-decoration: underline;
+    }
+}
+
+
+
+/**
+ * Blockquotes
+ */
+blockquote {
+    background: $grey-color-light;
+    margin-left: -($spacing-unit / 3);
+    margin-right: -($spacing-unit / 3);
+    padding: $spacing-unit / 3;
+
+    > :last-child {
+        margin-bottom: 0;
+    }
+}
+
+
+
+/**
+ * Code formatting
+ */
+pre,
+code {
+    background-color: #eef;
+    border-radius: 3px;
+    border: 1px solid $grey-color-light;
+    font-size: 15px;
+}
+
+code {
+    padding: 1px 5px;
+}
+
+pre {
+    overflow-x: scroll;
+    padding: 8px 12px;
+
+    > code {
+        border: 0;
+        padding-left: 0;
+        padding-right: 0;
+    }
+}
+
+
+
+/**
+ * Wrapper
+ */
+.wrapper {
+    margin-left: auto;
+    margin-right: auto;
+    max-width:         calc(#{$content-width} - (#{$spacing-unit} * 2));
+    max-width: -webkit-calc(#{$content-width} - (#{$spacing-unit} * 2));
+    padding-left: $spacing-unit;
+    padding-right: $spacing-unit;
+    @extend %clearfix;
+
+    @include media-query($on-laptop) {
+        max-width:         calc(#{$content-width} - (#{$spacing-unit}));
+        max-width: -webkit-calc(#{$content-width} - (#{$spacing-unit}));
+        padding-left: $spacing-unit / 2;
+        padding-right: $spacing-unit / 2;
+    }
+}
+
+
+
+/**
+ * Clearfix
+ */
+%clearfix {
+
+    &:after {
+        clear: both;
+        content: "";
+        display: table;
+    }
+}
+
+
+
+/**
+ * Icons
+ */
+.icon {
+
+    > svg {
+        display: inline-block;
+        height: 16px;
+        vertical-align: middle;
+        width: 16px;
+
+        path {
+            fill: $grey-color;
+        }
+    }
+}

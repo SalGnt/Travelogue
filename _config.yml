@@ -1,0 +1,24 @@
+# Site settings
+title: Travelogue
+email: your-email@domain.com
+
+baseurl: '' # the subpath of your site, e.g. /blog/
+url: 'http://yourdomain.com' # the base hostname & protocol for your site
+
+# Build settings
+markdown:            kramdown
+relative_permalinks: false
+permalink:           /:year/:month/:day/:title.html
+
+sass:
+    sass_dir: _sass
+    style:    compressed
+
+defaults:
+  -
+      scope:
+        path: "_posts"
+        type: "posts"
+      values:
+        show_tags: true
+        show_categories: true

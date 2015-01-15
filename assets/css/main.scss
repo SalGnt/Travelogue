@@ -1,0 +1,71 @@
+---
+# Only the main Sass file needs front matter (the dashes are enough)
+---
+@charset "utf-8";
+
+/*
+   Variables
+   ========================================================================== */
+$base-font-family: "Merriweather", serif;
+$base-font-family-sans: "Lato", sans-serif;
+$base-font-size:   16px;
+$small-font-size:  $base-font-size * 0.875;
+$base-line-height: 1;
+
+$spacing-unit:     60px;
+
+$dark-color:       #111;
+$light-color:      #eee;
+
+$text-color:       $dark-color;
+$text-color-light: $light-color;
+$background-color: #fdfdfd;
+$brand-color:      #e74c3c;
+$brand-color-2:    #2a7ae2;
+
+$grey-color:       #828282;
+$grey-color-light: lighten($grey-color, 40%);
+$grey-color-dark:  darken($grey-color, 25%);
+
+$content-width:    640px;
+
+$on-palm:          799px;
+$on-laptop:        800px;
+
+$radius:           6px;
+$transition-base:  all 150ms linear;
+$header-height:    100px;
+
+/*
+   Mixins
+   ========================================================================== */
+@mixin media-query($device) {
+    @media screen and (max-width: $device) {
+        @content;
+    }
+}
+
+@mixin border-radius($radius) {
+    -webkit-border-radius: $radius;
+    -moz-border-radius:    $radius;
+    -ms-border-radius:     $radius;
+        border-radius:     $radius;
+}
+
+@mixin transition($args...) {
+    -webkit-transition: $args;
+       -moz-transition: $args;
+       -ms-transition:  $args;
+       -o-transition:   $args;
+       transition:      $args;
+}
+
+/*
+   Import
+   ========================================================================== */
+@import
+        "base",
+        "layout",
+        "sidebar",
+        "syntax-highlighting"
+;

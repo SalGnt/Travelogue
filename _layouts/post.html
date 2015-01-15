@@ -1,0 +1,50 @@
+---
+layout: default
+---
+<div class="post">
+    <header class="post-header">
+        <div style="background-image: url({{ page.thumb }});" class="post-thumb"></div>
+
+        <h1 class="post-title">{{ page.title }}</h1>
+
+        <!-- TO-DO: post-share -->
+    </header>
+
+    <article class="post-content">
+        {{ content }}
+    </article>
+
+    <footer class="post-meta">
+        <div class="meta">
+            <h3 class="meta-title">Date</h3>
+            <span class="meta-content">{{ page.date | date: "%B %-d, %Y" }}</span>
+        </div>
+        {% if page.author %}
+        <div class="meta">
+            <h3 class="meta-title">Author</h3>
+            <span class="meta-content">{{ page.author }}</span>
+        </div>
+        {% endif %}
+        {% if page.list_categories %}
+        <div class="meta">
+            <h3 class="meta-title">Categories</h3>
+            <span class="meta-content">
+                {% for category in page.categories %}
+                    {{ category | capitalize }}&nbsp;
+                {% endfor %}
+            </span>
+        </div>
+        {% endif %}
+        {% if page.list_tags %}
+        <div class="meta">
+            <h3 class="meta-title">Tags</h3>
+            <span class="meta-content">
+                {% for tag in page.tags %}
+                    {{ tag | capitalize }}&nbsp;
+                {% endfor %}
+            </span>
+        </div>
+        {% endif %}
+    </footer>
+
+</div>

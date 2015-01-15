@@ -1,0 +1,12 @@
+{% if page.next %}
+<div class="next-post">
+    <a href="{{ page.next.url }}" class="next-post-link"></a>
+
+    <div style="background-image: url({{ page.next.thumb }});" class="next-post-thumb"></div>
+
+    <div class="next-post-info">
+        <span class="next-story">Next Story</span>
+        <h3 class="next-post-title">{{ page.next.title }}</h3>
+    </div>
+</div>
+{% endif %}

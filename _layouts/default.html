@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+
+{% include head.html %}
+
+<body>
+    <div id="sb-site">
+
+        <a href="#" class="sb-toggle-left">
+            <i class="icon ion-navicon"></i>
+        </a>
+
+        <div class="container">
+            <div class="wrapper">
+                {{ content }}
+            </div>
+
+            {% include next.html %}
+        </div>
+
+    </div>
+
+    {% include sidebar.html %}
+
+    {% include js.html %}
+</body>
+
+</html>

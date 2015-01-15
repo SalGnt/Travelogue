@@ -1,0 +1,28 @@
+---
+layout: default
+---
+
+<div class="home">
+    <ul class="post-list">
+        {% for post in site.posts %}
+        <li>
+            <a href="{{ post.url }}" class="post-list-link"></a>
+
+            <div style="background-image: url({{ post.thumb }});" class="post-list-thumb"></div>
+
+            <div class="post-list-info">
+                <span class="post-list-meta">{{ post.date | date: "%B %-d, %Y" }}</span>
+                <h2 class="post-list-title">{{ post.title }}</h2>
+            </div>
+        </li>
+        {% endfor %}
+    </ul>
+
+    <!-- <p class="rss-subscribe">subscribe <a href="{{ "/feed.xml" | prepend: site.baseurl }}">via RSS</a></p> -->
+    <!-- <p class="rss-subscribe">
+        <a href="{{ "/feed.xml" | prepend: site.baseurl }}">
+            Subscribe via RSS
+            <i class="icon ion-social-rss"></i>
+        </a>
+    </p> -->
+</div>

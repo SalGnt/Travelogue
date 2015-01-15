@@ -1,0 +1,53 @@
+<script type="text/javascript" src="{{ "/assets/js/vendors/jquery.min.js" | prepend: site.baseurl }}"></script>
+<script type="text/javascript" src="{{ "/assets/js/vendors/slidebars.min.js" | prepend: site.baseurl }}"></script>
+<script type="text/javascript" src="{{ "/assets/js/vendors/jquery.backstretch.min.js" | prepend: site.baseurl }}"></script>
+<script type="text/javascript" src="{{ "/assets/js/vendors/jquery.scrollstop.js" | prepend: site.baseurl }}"></script>
+<script type="text/javascript" src="{{ "/assets/js/vendors/jquery.magnific-popup.min.js" | prepend: site.baseurl }}"></script>
+<script type="text/javascript" src="{{ "/assets/js/functions.js" | prepend: site.baseurl }}"></script>
+<script type="text/javascript">
+    (function($) {
+        var steps = [];
+
+        $(document).ready(function () {
+            $.slidebars();
+
+            var images = [
+                {% for image in page.backgrounds %}"{{ image }}",{% endfor %}
+            ];
+
+            if (images.length > 0) {
+                steps = scrollSteps(images.length);
+
+                $.backstretch(images, { fade: 800 });
+                $.backstretch("pause");
+            }
+
+            $('.post-map-link').magnificPopup({
+                type: 'image',
+                image: {
+                    verticalFit: true
+                },
+                zoom: {
+                    enabled: true,
+                    duration: 450
+                },
+                closeBtnInside: false,
+                preloader: true,
+                removalDelay: 500
+            });
+        });
+
+        $(document).on("scrollstop", function () {
+            if (steps.length > 0) {
+                var percentage = scrollPercentage();
+
+                for (var i = 0; i < steps.length; i++) {
+                    if (percentage < steps[i]) {
+                        $.backstretch("show", i);
+                        break;
+                    }
+                }
+            }
+        });
+    }) (jQuery);
+</script>

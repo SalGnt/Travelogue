@@ -5,7 +5,7 @@ Travelogue
 
 Travelogue is a minimal, single-column [Jekyll](http://jekyllrb.com/) theme that provides an immersive read experience for your readers.
 
-![Post Header](https://dl.dropboxusercontent.com/u/18322837/GitHub/Travelogue/Post.png)
+![Post](https://dl.dropboxusercontent.com/u/18322837/GitHub/Travelogue/Post.png)
 
 
 ## Getting Started

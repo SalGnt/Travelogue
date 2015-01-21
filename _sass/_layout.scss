@@ -86,12 +86,10 @@
         }
 
         .post-list-thumb {
-            background-position: center center;
-            background-repeat: no-repeat;
-            background-size: cover;
             float: left;
             height: 200px;
             margin-right: 30px;
+            object-fit: cover;
             width: 200px;
 
             @include media-query($on-laptop) {
@@ -164,12 +162,9 @@
 }
 
 .post-thumb {
-    background-position: center center;
-    background-repeat: no-repeat;
-    background-size: cover;
     height: 200px;
     margin: 0 auto $spacing-unit auto;
-    overflow: hidden;
+    object-fit: cover;
     position: relative;
     width: 200px;
 
@@ -288,12 +283,10 @@
     }
 
     .next-post-thumb {
-        background-position: center center;
-        background-repeat: no-repeat;
-        background-size: cover;
         float: left;
         height: 200px;
         margin-right: 30px;
+        object-fit: cover;
         width: 200px;
 
         @include media-query($on-laptop) {

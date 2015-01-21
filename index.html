@@ -8,7 +8,7 @@ layout: default
         <li>
             <a href="{{ post.url }}" class="post-list-link"></a>
 
-            <div style="background-image: url({{ post.thumb }});" class="post-list-thumb"></div>
+            <img src="{{ post.thumb }}" class="post-list-thumb" />
 
             <div class="post-list-info">
                 <span class="post-list-meta">{{ post.date | date: "%B %-d, %Y" }}</span>

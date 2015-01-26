@@ -125,7 +125,7 @@
                 letter-spacing: 4px;
                 line-height: 150%;
                 margin: 0;
-                padding-top: 20px;
+                padding-top: 10px;
                 text-transform: uppercase;
 
                 @include transition($transition-base);
@@ -326,7 +326,7 @@
             letter-spacing: 4px;
             line-height: 150%;
             margin: 0;
-            padding-top: 20px;
+            padding-top: 10px;
             text-transform: uppercase;
 
             @include transition($transition-base);

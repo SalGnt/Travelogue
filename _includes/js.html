@@ -2,7 +2,7 @@
 <script type="text/javascript" src="{{ "/assets/js/vendors/slidebars.min.js" | prepend: site.baseurl }}"></script>
 <script type="text/javascript" src="{{ "/assets/js/vendors/jquery.backstretch.min.js" | prepend: site.baseurl }}"></script>
 <script type="text/javascript" src="{{ "/assets/js/vendors/jquery.scrollstop.js" | prepend: site.baseurl }}"></script>
-<script type="text/javascript" src="{{ "/assets/js/vendors/jquery.magnific-popup.min.js" | prepend: site.baseurl }}"></script>
+<script type="text/javascript" src="{{ "/assets/js/vendors/oridomi.min.js" | prepend: site.baseurl }}"></script>
 <script type="text/javascript" src="{{ "/assets/js/functions.js" | prepend: site.baseurl }}"></script>
 <script type="text/javascript">
     (function($) {
@@ -21,20 +21,6 @@
                 $.backstretch(images, { fade: 800 });
                 $.backstretch("pause");
             }
-
-            $('.post-map-link').magnificPopup({
-                type: 'image',
-                image: {
-                    verticalFit: true
-                },
-                zoom: {
-                    enabled: true,
-                    duration: 450
-                },
-                closeBtnInside: false,
-                preloader: true,
-                removalDelay: 500
-            });
         });
 
         $(document).on("scrollstop", function () {

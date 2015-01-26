@@ -1,5 +1,6 @@
 Travelogue
 ==========
+[![Live Demo](http://img.shields.io/badge/Travelogue-DEMO-7D8866.svg?style=flat)](https://salgnt.github.io/Travelogue)&nbsp;
 [![The MIT License](http://img.shields.io/badge/License-MIT-green.svg?style=flat)](#license)&nbsp;
 [![Gitter](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/SalGnt/Travelogue?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge)
 

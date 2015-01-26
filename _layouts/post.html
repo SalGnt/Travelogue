@@ -25,7 +25,7 @@ layout: default
             <span class="meta-content">{{ page.author }}</span>
         </div>
         {% endif %}
-        {% if page.list_categories %}
+        {% if page.show_categories %}
         <div class="meta">
             <h3 class="meta-title">Categories</h3>
             <span class="meta-content">
@@ -35,7 +35,7 @@ layout: default
             </span>
         </div>
         {% endif %}
-        {% if page.list_tags %}
+        {% if page.show_tags %}
         <div class="meta">
             <h3 class="meta-title">Tags</h3>
             <span class="meta-content">

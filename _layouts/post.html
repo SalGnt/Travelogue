@@ -2,6 +2,17 @@
 layout: default
 ---
 <div class="post">
+    {% if page.reading_time %}
+    <p class="post-reading-time">&#126;
+        {% capture words %}
+          {{ content | number_of_words | minus: 180 }}
+        {% endcapture %}
+        {% unless words contains "-" %}
+          {{ words | plus: 180 | divided_by: 180 | append: " min" }}
+        {% endunless %}
+    </p>
+    {% endif %}
+
     <header class="post-header">
         <img src="{{ page.thumb }}" alt="{{ page.title }}" class="post-thumb" />
 

@@ -151,11 +151,13 @@
     padding: $spacing-unit 0;
 }
 
-.post-id {
+.post-reading-time {
+    color: $grey-color;
     font-family: $base-font-family-sans;
-    font-size: 20px;
+    font-size: 16px;
     font-weight: 700;
-    letter-spacing: 5px;
+    letter-spacing: 3px;
+    margin-bottom: 0;
     padding-top: $spacing-unit;
     text-align: center;
     text-transform: uppercase;

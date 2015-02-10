@@ -53,10 +53,9 @@ All the details about a post are located after its content. Tags and categories 
 
     show_tags: false
     show_categories: false
-    
 
 You can also specify the author's name for each post by adding the following variable in the front matter.
-    
+
     author: John Doe
 
 ![Post Footer](https://dl.dropboxusercontent.com/u/18322837/GitHub/Travelogue/Footer.png)

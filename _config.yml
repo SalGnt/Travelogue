@@ -10,6 +10,9 @@ markdown:            kramdown
 relative_permalinks: false
 permalink:           /:year/:month/:day/:title.html
 
+pagination:          true
+paginate:            8
+
 sass:
     sass_dir: _sass
     style:    compressed

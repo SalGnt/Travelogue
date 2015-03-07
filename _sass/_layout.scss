@@ -24,6 +24,60 @@
 /*
    Index
    ========================================================================== */
+.home {
+    padding-top: $spacing-unit;
+}
+
+.no_pagination {
+    display: none;
+}
+
+.pagination {
+    background: $dark-color;
+    height: $spacing-unit;
+    padding: ($spacing-unit / 4) 0;
+
+    .navigator {
+        color: $grey-color-dark !important;
+        float: left;
+        font-family: $base-font-family-sans;
+        font-weight: 700;
+        height: $spacing-unit / 2;
+        line-height: $spacing-unit / 2;
+        padding: 1rem;
+        text-align: center;
+        text-transform: uppercase;
+        width: $spacing-unit;
+
+        @include border-radius(50%);
+
+        i {
+            font-size: 32px;
+        }
+    }
+
+    a.navigator {
+        color: $grey-color-light !important;
+
+        &:hover {
+            color: $grey-color !important;
+        }
+    }
+
+    .prev {
+        @extend .navigator;
+    }
+
+    .next {
+        @extend .navigator;
+        float: right;
+    }
+
+    .disabled {
+        @extend .navigator;
+        color: $grey-color-dark !important;
+    }
+}
 
 .post-list {
     margin-left: 0;

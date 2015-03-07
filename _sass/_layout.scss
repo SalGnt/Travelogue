@@ -2,24 +2,6 @@
    LAYOUT
    ========================================================================== */
 
-.sb-toggle-left {
-    font-size: 28pt;
-    left: 30px;
-    position: fixed;
-    text-shadow: 0px 0px 12px $grey-color-dark;
-    top: 30px;
-
-    &,
-    &:hover,
-    &:visited {
-        color: $text-color-light;
-    }
-
-    @include media-query($on-laptop) {
-        position: absolute;
-    }
-}
-
 #sb-site {
     background-color: transparent;
     padding: $header-height 0;

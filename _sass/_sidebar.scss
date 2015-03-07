@@ -2,14 +2,60 @@
    SIDEBAR
    ========================================================================== */
 
+.sb-toggle-left {
+    height: 54px;
+    left: $spacing-unit / 2;
+    position: fixed;
+    text-indent: 100%;
+    top: $spacing-unit / 2;
+    white-space: nowrap;
+    width: 54px;
+    z-index: 1;
+
+    @include media-query($on-laptop) {
+        position: absolute;
+    }
+
+    .nav-icon {
+        background: $background-color;
+        box-shadow: 0 0 8px 0 $dark-color;
+        height: 2px;
+        left: 50%;
+        position: absolute;
+        top: 50%;
+        width: 28px;
+
+        @include transform(translateX(-50%) translateY(-50%));
+
+        &:after, &:before {
+            background: $background-color;
+            box-shadow: inherit;
+            content: '';
+            height: 100%;
+            position: absolute;
+            right: 0;
+            top: 0;
+            width: 100%;
+        }
+
+        &:before {
+            @include transform(translateY(-8px));
+        }
+
+        &:after {
+            @include transform(translateY(8px));
+        }
+    }
+}
+
 .sb-slidebar {
-    background-color: $dark-color;
+    background: $dark-color;
     color: $text-color-light;
     letter-spacing: 1px;
-    overflow: hidden;
+    z-index: 2;
 
     .site-title {
-        font-size: 22px;
+        font-size: 26px;
         letter-spacing: 2px;
         margin: 0;
         padding: $spacing-unit ($spacing-unit / 3);
@@ -28,6 +74,11 @@
         p {
             margin: 0;
         }
+
+        @include media-query($on-laptop) {
+            padding: $spacing-unit / 4;
+            width: auto;
+        }
     }
 
     .sb-menu {
@@ -45,8 +96,6 @@
             border-top: 1px solid rgba($light-color, .05);
             margin: 0;
             padding: 0;
-            position: relative;
-            width: 100%;
 
             &:last-child {
                 border-bottom: 1px solid rgba($light-color, .05);
@@ -55,9 +104,8 @@
             a {
                 color: $text-color-light;
                 font-family: $base-font-family-sans;
-                display: inline-block;
-                padding: ($spacing-unit / 3);
-                width: 100%;
+                display: block;
+                padding: ($spacing-unit / 2) ($spacing-unit / 3);
 
                 &:hover {
                     background-color: $light-color;

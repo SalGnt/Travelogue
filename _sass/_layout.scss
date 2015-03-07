@@ -223,6 +223,21 @@
     }
 }
 
+.post-share {
+    margin-bottom: $spacing-unit;
+
+    .rrssb-buttons li {
+        padding: 0 5px 0 0;
+
+        &:last-child {
+            padding-right: 0;
+        }
+
+        a {
+            @include border-radius(0);
+        }
+    }
+}
 
 .post-meta {
     line-height: 2;

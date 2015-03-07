@@ -1,19 +1,26 @@
 ---
 layout: default
+home: true
 ---
 
 <div class="home">
     <ul class="post-list">
-        {% for post in site.posts %}
+        {% if site.pagination %}
+        {% assign source = paginator.posts %}
+        {% else %}
+        {% assign source = site.posts %}
+        {% endif %}
+
+        {% for post in source %}
         <li>
-            <a href="{{ post.url }}" class="post-list-link"></a>
+            <a href="{{ post.url }}" class="post-list-link">
+                <div class="post-list-info">
+                    <h2 class="post-list-title">{{ post.title }}</h2>
+                    <span class="post-list-meta">{{ post.date | date: "%B %-d, %Y" }}</span>
+                </div>
+            </a>
 
             <img src="{{ post.thumb }}" class="post-list-thumb" />
-
-            <div class="post-list-info">
-                <span class="post-list-meta">{{ post.date | date: "%B %-d, %Y" }}</span>
-                <h2 class="post-list-title">{{ post.title }}</h2>
-            </div>
         </li>
         {% endfor %}
     </ul>

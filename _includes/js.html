@@ -5,35 +5,34 @@
 <script type="text/javascript" src="{{ "/assets/js/vendors/rrssb.min.js" | prepend: site.baseurl }}"></script>
 <script type="text/javascript" src="{{ "/assets/js/functions.js" | prepend: site.baseurl }}"></script>
 <script type="text/javascript">
-    (function($) {
+    $(function($) {
         var steps = [];
+        var folded;
 
-        $(document).ready(function () {
-            $.slidebars();
+        $.slidebars();
 
-            var images = [
-                {% for image in page.backgrounds %}"{{ image }}",{% endfor %}
-            ];
+        var images = [
+            {% for image in page.backgrounds %}'{{ image }}',{% endfor %}
+        ];
 
-            if (images.length > 0) {
-                steps = scrollSteps(images.length);
+        if (images.length > 0) {
+            steps = scrollSteps(images.length);
 
-                $.backstretch(images, { fade: 800 });
-                $.backstretch("pause");
-            }
-        });
+            $.backstretch(images, { fade: 800 });
+            $.backstretch('pause');
+        }
 
-        $(document).on("scrollstop", function () {
+        $(document).on('scrollstop', function () {
             if (steps.length > 0) {
                 var percentage = scrollPercentage();
 
                 for (var i = 0; i < steps.length; i++) {
                     if (percentage < steps[i]) {
-                        $.backstretch("show", i);
+                        $.backstretch('show', i);
                         break;
                     }
                 }
             }
         });
-    }) (jQuery);
+    });
 </script>

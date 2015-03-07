@@ -1,19 +1,17 @@
 ---
-# Only the main Sass file needs front matter (the dashes are enough)
+# Main
 ---
 @charset "utf-8";
 
 /*
    Variables
    ========================================================================== */
-$base-font-family: "Merriweather", serif;
+$base-font-family:      "Merriweather", serif;
 $base-font-family-sans: "Lato", sans-serif;
-$base-font-size:   16px;
-$small-font-size:  $base-font-size * 0.875;
-$base-line-height: 1;
-
-$spacing-unit:     60px;
 $base-font-family-mono: "Source Code Pro", monospace;
+$base-font-size:        16px;
+$small-font-size:       $base-font-size * 0.875;
+$base-line-height:      1;
 
 $dark-color:       #111;
 $light-color:      #eee;
@@ -22,20 +20,21 @@ $text-color:       $dark-color;
 $text-color-light: $light-color;
 $background-color: #fdfdfd;
 $brand-color:      #e74c3c;
-$brand-color-2:    #2a7ae2;
+$brand-color-2:    #7D8866;
 
 $grey-color:       #828282;
 $grey-color-light: lighten($grey-color, 35%);
 $grey-color-dark:  darken($grey-color, 20%);
 
-$content-width:    640px;
+$content-width:    700px;
+$spacing-unit:     60px;
 
 $on-palm:          799px;
 $on-laptop:        800px;
 
 $radius:           6px;
-$transition-base:  all 150ms linear;
-$header-height:    100px;
+$transition-base:  all 200ms linear;
+$transition-nav:   all 500ms linear;
 
 /*
    Mixins
@@ -50,23 +49,30 @@ $header-height:    100px;
     -webkit-border-radius: $radius;
     -moz-border-radius:    $radius;
     -ms-border-radius:     $radius;
-        border-radius:     $radius;
+    border-radius:         $radius;
+}
+
+@mixin transform($args...) {
+    -webkit-transform: $args;
+    -moz-transform:    $args;
+    -o-transform:      $args;
+    transform:         $args;
 }
 
 @mixin transition($args...) {
     -webkit-transition: $args;
-       -moz-transition: $args;
-       -ms-transition:  $args;
-       -o-transition:   $args;
-       transition:      $args;
+    -moz-transition:    $args;
+    -ms-transition:     $args;
+    -o-transition:      $args;
+    transition:         $args;
 }
 
 /*
    Import
    ========================================================================== */
 @import
-        "base",
-        "layout",
-        "sidebar",
-        "syntax-highlighting"
+    "base",
+    "layout",
+    "sidebar",
+    "syntax-highlighting"
 ;

@@ -18,7 +18,7 @@ dl, dd, ol, ul, figure {
  * Basic styling
  */
 body {
-    background: $grey-color-dark url("/assets/img/dark-green-canvas.jpg") repeat;
+    background: $brand-color-2;
     color: $text-color;
     font-family: $base-font-family;
     font-size: $base-font-size;
@@ -109,7 +109,6 @@ a {
 
     &:hover {
         color: $grey-color;
-        // text-decoration: underline;
     }
 }
 
@@ -168,8 +167,6 @@ pre {
     margin-right: auto;
     max-width:         calc(#{$content-width} - (#{$spacing-unit} * 2));
     max-width: -webkit-calc(#{$content-width} - (#{$spacing-unit} * 2));
-    padding-left: $spacing-unit;
-    padding-right: $spacing-unit;
     @extend %clearfix;
 
     @include media-query($on-laptop) {

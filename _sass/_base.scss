@@ -137,18 +137,19 @@ blockquote {
 pre,
 code {
     background-color: #eef;
-    border-radius: 3px;
-    border: 1px solid $grey-color-light;
+    font-family: $base-font-family-mono;
     font-size: 15px;
 }
 
 code {
-    padding: 1px 5px;
+    padding: 4px;
 }
 
 pre {
+    margin-left: - $spacing-unit;
+    margin-right: - $spacing-unit;
     overflow-x: scroll;
-    padding: 8px 12px;
+    padding: ($spacing-unit / 3) $spacing-unit;
 
     > code {
         border: 0;

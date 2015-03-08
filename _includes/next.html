@@ -1,6 +1,6 @@
 {% if page.next %}
 <div class="next-post">
-    <a href="{{ site.baseurl }}{{ page.next.url }}" class="next-post-link"></a>
+    <a href="{{ page.next.url | prepend: site.baseurl }}" class="next-post-link"></a>
 
     <img src="{{ page.next.thumb }}" class="next-post-thumb" />
 

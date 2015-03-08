@@ -8,10 +8,11 @@ url: 'http://yourdomain.com' # the base hostname & protocol for your site
 # Build settings
 markdown:            kramdown
 relative_permalinks: false
-permalink:           /:year/:month/:day/:title.html
+permalink:           :title/
 
 pagination:          true
 paginate:            8
+paginate_path:       page/:num/
 
 sass:
     sass_dir: _sass

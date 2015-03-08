@@ -182,6 +182,27 @@
 }
 
 /*
+   Archive
+   ========================================================================== */
+.post-archive-year {
+    color: $grey-color-dark;
+    font-family: $base-font-family-sans;
+    font-weight: 700;
+    text-align: center;
+}
+
+.post-archive {
+    list-style: none;
+    margin: 0;
+    margin-bottom: $spacing-unit;
+    text-align: center;
+
+    > li a {
+        font-size: 24px;
+    }
+}
+
+/*
    Post
    ========================================================================== */
 .post-header {

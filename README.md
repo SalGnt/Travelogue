@@ -20,10 +20,10 @@ Visit the [Jekyll website](http://jekyllrb.com/) for more information.
 
 
 ### Features
-
-* Minimal design;
+* Minimal, content focused design;
 * Responsive and mobile friendly;
 * Integrated slideshow activated on page scroll;
+* Customizable share buttons;
 
 #### Sidebar
 A link of each page will be added to the menu integrated in the sidebar.
@@ -46,9 +46,7 @@ You can add one or more `backgrounds` in the front matter by using the syntax sh
         - http://yourdomain.com/public/images/post_title/background_03.jpeg
         - ...
 
-
 #### Info
-
 All the details about a post are located after its content. Tags and categories can be hidden by adding the following variables in the front matter.
 
     show_tags: false
@@ -60,6 +58,8 @@ You can also specify the author's name for each post by adding the following var
 
 ![Post Footer](https://dl.dropboxusercontent.com/u/18322837/GitHub/Travelogue/Footer.png)
 
+#### Share Buttons
+The template make use of [RRSSB](https://github.com/kni-labs/rrssb). You can enable or disable each share button by editing the `_data/share.yml` file.
 
 #### Next Post
 A link to the next post will be placed at the end of each post.

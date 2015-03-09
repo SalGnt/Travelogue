@@ -13,7 +13,7 @@ home: true
 
         {% for post in source %}
         <li>
-            <a href="{{ site.baseurl }}{{ post.url }}" class="post-list-link">
+            <a href="{{ post.url | prepend: site.baseurl }}" class="post-list-link">
                 <div class="post-list-info">
                     <h2 class="post-list-title">{{ post.title }}</h2>
                     <span class="post-list-meta">{{ post.date | date: "%B %-d, %Y" }}</span>

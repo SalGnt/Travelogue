@@ -80,44 +80,37 @@
 }
 
 .post-list {
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
     margin: 0;
     list-style: none;
 
+    @include flex-wrap(wrap);
+
     > li {
+        border: 10px solid transparent;
         color: $text-color-light;
-        float: left;
+        flex-grow: 1;
         height: 200px;
-        margin-bottom: 6%;
-        margin-right: 6%;
         overflow: hidden;
         position: relative;
-        width: 47%;
+        width: 46%;
+
+        @include transition($transition-base);
 
         // &:first-child {
-        //     height: 360px;
-        //     margin-right: 0;
         //     width: 100%;
-        //
-        //     .post-link .post-list-info .post-list-title {
-        //         font-size: 24px;
-        //     }
-        //
-        //     .post-link .post-list-info .post-list-meta {
-        //         font-size: 12px;
-        //     }
         // }
 
         &:last-child {
             margin-bottom: $spacing-unit;
         }
 
-        &:nth-child(even) {
-            margin-right: 0;
-        }
-
-        @include media-query($on-laptop) {
-            margin-right: 0;
-            width: 100%;
+        &:hover {
+            border-color: $grey-color-light;
         }
 
         .post-list-link {
@@ -132,22 +125,12 @@
                 background: rgba($dark-color, .25);
             }
 
-            @include media-query($on-laptop) {
-                padding: 20px;
-            }
-
             .post-list-info {
-                bottom: 50%;
-                margin-bottom: -35%;
-                padding: $spacing-unit / 3;
+                bottom: $spacing-unit / 4;
+                padding: 0 ($spacing-unit / 4);
                 position: absolute;
                 text-shadow: 1px 1px 10px $dark-color;
                 text-transform: uppercase;
-
-                @include media-query($on-laptop) {
-                    padding: $spacing-unit / 4;
-                    margin-bottom: -25%
-                }
 
                 .post-list-title {
                     color: $light-color;
@@ -292,11 +275,18 @@
 }
 
 .post-meta {
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
     line-height: 2;
+
+    @include flex-wrap(wrap);
 
     .meta {
         display: inline-block;
-        margin: -2px;
+        flex-grow: 1;
         padding-bottom: $spacing-unit;
         width: 50%;
 

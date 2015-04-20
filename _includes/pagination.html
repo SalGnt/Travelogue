@@ -1,3 +1,4 @@
+{% if site.pagination %}
 {% if page.home %}
 <div class="{% if paginator.total_pages > 1 %}pagination{% else %}no_pagination{% endif %}">
     {% if paginator.previous_page %}
@@ -26,4 +27,5 @@
         </span>
     {% endif %}
 </div>
+{% endif %}
 {% endif %}

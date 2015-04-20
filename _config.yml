@@ -21,8 +21,8 @@ sass:
 defaults:
   -
       scope:
-        path: "_posts"
-        type: "posts"
+        path: '_posts'
+        type: 'posts'
       values:
         reading_time: true
         show_tags: true

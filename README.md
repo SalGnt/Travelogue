@@ -59,7 +59,7 @@ You can also specify the author's name for each post by adding the following var
 ![Post Footer](https://dl.dropboxusercontent.com/u/18322837/GitHub/Travelogue/Footer.png)
 
 #### Share Buttons
-The template make use of [RRSSB](https://github.com/kni-labs/rrssb). You can enable or disable each share button by editing the `_data/share.yml` file.
+The template make use of [RRSSB](https://github.com/kni-labs/rrssb). You can enable or disable the entire section or each share button by editing the `# RRSSBB` section in the `_data/social.yml` file.
 
 #### Next Post
 A link to the next post will be placed at the end of each post.

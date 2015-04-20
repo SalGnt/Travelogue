@@ -1,10 +1,11 @@
+{% if site.data.social.share %}
 {% assign share-url = page.url | prepend: site.baseurl | prepend: site.url %}
 {% assign share-thumb = page.thumb %} <!-- TO-DO -->
 {% assign share-title = page.title | replace: ' ', '%20' %}
 {% assign share-excerpt = page.excerpt | strip_html | truncatewords: 30 | replace: ' ', '%20' %}
 <div class="post-share">
     <ul class="rrssb-buttons tiny-format clearfix">
-        {% if site.data.share.facebook %}
+        {% if site.data.social.facebook %}
         <li class="rrssb-facebook">
             <a href="https://www.facebook.com/sharer/sharer.php?u={{ share-url }}" title="Facebook" class="popup">
                 <span class="rrssb-icon">
@@ -14,7 +15,7 @@
             </a>
         </li>
         {% endif %}
-        {% if site.data.share.twitter %}
+        {% if site.data.social.twitter %}
         <li class="rrssb-twitter">
             <a href="http://twitter.com/share?url={{ share-url }}&amp;text={{ share-title }}" title="Twitter" class="popup">
                 <span class="rrssb-icon">
@@ -24,7 +25,7 @@
             </a>
         </li>
         {% endif %}
-        {% if site.data.share.googleplus %}
+        {% if site.data.social.googleplus %}
         <li class="rrssb-googleplus">
             <a href="https://plus.google.com/share?url={{ share-url }}" title="Google+" class="popup">
                 <span class="rrssb-icon">
@@ -34,7 +35,7 @@
             </a>
         </li>
         {% endif %}
-        {% if site.data.share.linkedin %}
+        {% if site.data.social.linkedin %}
         <li class="rrssb-linkedin">
             <a href="http://www.linkedin.com/shareArticle?mini=true&amp;url={{ share-url }}&amp;title={{ share-title }}&amp;summary={{ share-excerpt }}" title="LinkedIn" class="popup" class="popup">
                 <span class="rrssb-icon">
@@ -44,7 +45,7 @@
             </a>
         </li>
         {% endif %}
-        {% if site.data.share.reddit %}
+        {% if site.data.social.reddit %}
         <li class="rrssb-reddit">
             <a href="http://www.reddit.com/submit?url={{ share-url }}&amp;title={{ share-title }}" title="Reddit" class="popup">
                 <span class="rrssb-icon">
@@ -54,7 +55,7 @@
             </a>
         </li>
         {% endif %}
-        {% if site.data.share.pinterest %}
+        {% if site.data.social.pinterest %}
         <li class="rrssb-pinterest">
             <a href="http://pinterest.com/pin/create/button/?url={{ share-url }}&amp;media={{ share-thumb }}&amp;description={{ share-excerpt }}" class="popup">
                 <span class="rrssb-icon">
@@ -64,7 +65,7 @@
             </a>
         </li>
         {% endif %}
-        {% if site.data.share.tumblr %}
+        {% if site.data.social.tumblr %}
         <li class="rrssb-tumblr">
             <a href="http://tumblr.com/share/link?url={{ share-url }}&amp;name={{ share-title }}&amp;description={{ share-excerpt }}" class="popup">
                 <span class="rrssb-icon">
@@ -74,7 +75,7 @@
             </a>
         </li>
         {% endif %}
-        {% if site.data.share.pocket %}
+        {% if site.data.social.pocket %}
         <li class="rrssb-pocket">
             <a href="https://getpocket.com/save?url={{ share-url }}" class="popup">
                 <span class="rrssb-icon">
@@ -84,7 +85,7 @@
             </a>
         </li>
         {% endif %}
-        {% if site.data.share.email %}
+        {% if site.data.social.email %}
         <li class="rrssb-email">
             <a href="mailto:?subject={{ share-title }}&amp;body={{ share-url }}" title="Email">
                 <span class="rrssb-icon">
@@ -96,3 +97,4 @@
         {% endif %}
     </ul>
 </div>
+{% endif %}

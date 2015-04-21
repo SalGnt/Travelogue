@@ -6,21 +6,28 @@
 <script type="text/javascript" src="{{ "/assets/js/functions.js" | prepend: site.baseurl }}"></script>
 <script type="text/javascript">
     $(function($) {
-        var steps = [];
-        var folded;
-
         $.slidebars();
 
+        var steps = [];
         var images = [
             {% for image in page.backgrounds %}'{{ image }}',{% endfor %}
         ];
 
         if (images.length > 0) {
+            $('.loader').addClass('loading');
+
             steps = scrollSteps(images.length);
 
-            $.backstretch(images, { fade: 800 });
+            $.backstretch(images, {
+                fade: 1000
+            });
+
             $.backstretch('pause');
         }
+
+        $(document).on("backstretch.before", function (e, instance, index) {
+            $('.loader').addClass('loading');
+        });
 
         $(document).on('scrollstop', function () {
             if (steps.length > 0) {
@@ -28,11 +35,19 @@
 
                 for (var i = 0; i < steps.length; i++) {
                     if (percentage < steps[i]) {
+                        if (i == $("body").data("backstretch").index) {
+                            break;
+                        }
+
                         $.backstretch('show', i);
                         break;
                     }
                 }
             }
+        });
+
+        $(document).on("backstretch.after", function (e, instance, index) {
+            $('.loader').removeClass('loading');
         });
     });
 </script>

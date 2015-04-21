@@ -1,0 +1,23 @@
+/* ==========================================================================
+   LOADER
+
+   Author: Phil Maurer [http://aurer.co.uk/]
+   URL:    http://codepen.io/aurer/pen/jEGbA
+   ========================================================================== */
+.loader {
+    right: $spacing-unit / 2;
+    position: fixed;
+    opacity: 0;
+    top: $spacing-unit / 2;
+    z-index: 1;
+
+    svg path {
+        fill: $light-color;
+    }
+
+    @include transition($transition-base);
+}
+
+.loading {
+    opacity: 1;
+}

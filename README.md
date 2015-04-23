@@ -24,6 +24,7 @@ Visit the [Jekyll website](http://jekyllrb.com/) for more information.
 * Responsive and mobile friendly;
 * Integrated slideshow activated on page scroll;
 * Customizable share buttons;
+* Disqus integration;
 
 #### Sidebar
 A link of each page will be added to the menu integrated in the sidebar.
@@ -59,7 +60,18 @@ You can also specify the author's name for each post by adding the following var
 ![Post Footer](https://dl.dropboxusercontent.com/u/18322837/GitHub/Travelogue/Footer.png)
 
 #### Share Buttons
-The template make use of [RRSSB](https://github.com/kni-labs/rrssb). You can enable or disable the entire section or each share button by editing the `# RRSSBB` section in the `_data/social.yml` file.
+The template make use of [RRSSB](https://github.com/kni-labs/rrssb). You can enable it in the `_config.yml` file.
+
+    share_buttons: true
+
+If you want you can also enable or disable each share button by editing the `# RRSSBB` section in the `_data/social.yml` file.
+
+#### Disqus
+The template let you use [Disqus](https://disqus.com). You can enable it in the `_config.yml` file.
+
+    disqus: true
+
+You should set your Disqus shortname under the `# Disqus` section in the `_data/social.yml` file.
 
 #### Next Post
 A link to the next post will be placed at the end of each post.

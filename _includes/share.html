@@ -1,4 +1,4 @@
-{% if site.data.social.share %}
+{% if page.share_buttons %}
 {% assign share-url = page.url | prepend: site.baseurl | prepend: site.url %}
 {% assign share-thumb = page.thumb %} <!-- TO-DO -->
 {% assign share-title = page.title | replace: ' ', '%20' %}

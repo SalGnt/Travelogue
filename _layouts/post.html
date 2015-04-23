@@ -14,7 +14,9 @@ layout: default
     {% endif %}
 
     <header class="post-header">
+        {% if page.thumb %}
         <img src="{{ page.thumb }}" alt="{{ page.title }}" class="post-thumb" />
+        {% endif %}
 
         <h1 class="post-title">{{ page.title }}</h1>
     </header>
@@ -24,10 +26,12 @@ layout: default
     </article>
 
     <footer class="post-meta">
+        {% if page.date %}
         <div class="meta">
             <h3 class="meta-title">Date</h3>
             <span class="meta-content">{{ page.date | date: "%B %-d, %Y" }}</span>
         </div>
+        {% endif %}
         {% if page.author %}
         <div class="meta">
             <h3 class="meta-title">Author</h3>

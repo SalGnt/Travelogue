@@ -1,5 +1,4 @@
 # RRSSB
-share: true
 facebook: true
 twitter: true
 googleplus: true
@@ -12,5 +11,4 @@ pocket: true
 email: false
 
 # Disqus
-disqus: true
 disqus_shortname: 'example'

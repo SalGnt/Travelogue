@@ -24,7 +24,9 @@ defaults:
         type: 'posts'
       values:
         reading_time: true
+        # Meta
         show_tags: true
         show_categories: true
+        # Social
         share_buttons: true
         disqus: true

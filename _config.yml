@@ -39,3 +39,4 @@ defaults:
 
 gems:
     - jekyll-feed
+    - jekyll-sitemap

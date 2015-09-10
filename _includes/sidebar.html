@@ -4,7 +4,7 @@
 
 <div class="sb-slidebar sb-left sb-style-push">
     <nav>
-        <a href="{{ site.baseurl }}/"><h2 class="site-title">{{ site.title }}</h2></a>
+        <a href="{{ site.baseurl }}/"><h2 class="site-title">{{ site.name }}</h2></a>
         <ul class="sb-menu">
         {% assign pages_list = site.pages | sort:"url" %}
         {% for node in pages_list %}
@@ -20,7 +20,7 @@
 
         <div class="site-info">
             <p>
-                {{ site.title }} &dash; Copyright &copy; {{ site.time | date: '%Y' }}
+                {{ site.name }} &dash; Copyright &copy; {{ site.time | date: '%Y' }}
             </p>
             <p>
                 Powered by Jekyll using <a href="http://github.com/SalGnt/Travelogue">Travelogue</a>

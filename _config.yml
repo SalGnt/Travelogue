@@ -1,5 +1,6 @@
 # Site settings
-title: Travelogue
+name: Travelogue
+description: 'A minimal, single-column Jekyll theme that provides an immersive read experience for your readers'
 
 baseurl: '' # the subpath of your site, e.g. /blog
 url: 'http://yourdomain.com' # the base hostname & protocol for your site
@@ -12,6 +13,11 @@ permalink:           :title/
 pagination:          true
 paginate:            8
 paginate_path:       page/:num/
+
+author:
+    name: 'Salvatore Gentile'
+    email: ''
+    uri: 'https://github.com/SalGnt'
 
 sass:
     sass_dir: _sass
@@ -30,3 +36,6 @@ defaults:
         # Social
         share_buttons: true
         disqus: true
+
+gems:
+    - jekyll-feed

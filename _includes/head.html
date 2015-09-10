@@ -3,7 +3,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
-    <title>{% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}</title>
+    <title>{% if page.title %}{{ page.title }}{% else %}{{ site.name }}{% endif %}</title>
     <meta name="description" content="{% if page.excerpt %}{{ page.excerpt | strip_html | strip_newlines | truncate: 160 | replace: ' ', '%20' }}{% else %}{{ site.description }}{% endif %}">
 
     <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Merriweather:300,300italic,400,400italic,700italic,700">
@@ -26,5 +26,5 @@
     <link rel="apple-touch-icon-precomposed" sizes="152x152" href="{{ "/assets/images/apple-touch-icon-152x152.png" | prepend: site.baseurl }}" />
 
     <link rel="canonical" href="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}">
-    <link rel="alternate" type="application/rss+xml" title="{{ site.title }}" href="{{ "/feed.xml" | prepend: site.baseurl | prepend: site.url }}" />
+    {% feed_meta %}
 </head>

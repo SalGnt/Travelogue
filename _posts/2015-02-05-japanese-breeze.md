@@ -3,8 +3,8 @@ layout: post
 title: "Japanese Breeze"
 date: 2015-02-05
 backgrounds:
-    - /assets/demo/tube.jpg
-thumb: /assets/demo/thumbs/chemex.jpg
+    - {{site.baseurl}}/assets/demo/tube.jpg
+thumb: {{site.baseurl}}/assets/demo/thumbs/chemex.jpg
 categories: travel city
 tags: japan winter spring metropolis
 ---

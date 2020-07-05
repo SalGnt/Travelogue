@@ -1,4 +1,4 @@
-name: Build Jekyll and Deploy to GitHub Pages
+name: Build and Deploy to Github Pages
 
 on:
   push:
@@ -24,3 +24,7 @@ jobs:
         with:
           provider: 'github'
           auth_token: ${{ secrets.GITHUB_TOKEN }}
+          repository: 'https://github.com/SalGnt/Travelogue'
+          branch: 'gh-pages'
+          jekyll_src: './'
+          jekyll_cfg: '_config.yml'

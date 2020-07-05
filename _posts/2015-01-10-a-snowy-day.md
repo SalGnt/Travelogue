@@ -3,10 +3,10 @@ layout: post
 title: "A Snowy Day"
 date: 2015-01-10
 backgrounds:
-    - https://dl.dropboxusercontent.com/u/18322837/cdn/Streetwill/on-the-road.jpeg
-    - https://dl.dropboxusercontent.com/u/18322837/cdn/Streetwill/freezing.jpeg
-    - https://dl.dropboxusercontent.com/u/18322837/cdn/Streetwill/village.jpeg
-thumb: https://dl.dropboxusercontent.com/u/18322837/cdn/Streetwill/thumbs/peak.jpeg
+    - /assets/demo/on-the-road.jpeg
+    - /assets/demo/freezing.jpeg
+    - /assets/demo/village.jpeg
+thumb: /assets/demo/thumbs/peak.jpeg
 category: photography
 tags: mountain snow nature
 ---

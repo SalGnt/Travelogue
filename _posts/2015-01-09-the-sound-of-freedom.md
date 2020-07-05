@@ -3,8 +3,8 @@ layout: post
 title: "The Sound of Freedom"
 date: 2015-01-09
 backgrounds:
-    - https://dl.dropboxusercontent.com/u/18322837/cdn/Streetwill/desk.jpeg
-thumb: https://dl.dropboxusercontent.com/u/18322837/cdn/Streetwill/thumbs/drum-rudiment.jpeg
+    - /assets/demo/desk.jpeg
+thumb: /assets/demo/thumbs/drum-rudiment.jpeg
 category: music
 tags: relax fun songs playlist
 ---

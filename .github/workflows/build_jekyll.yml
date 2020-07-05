@@ -1,4 +1,4 @@
-name: Build and Deploy to Github Pages
+name: Build and Deploy to GitHub Pages
 
 on:
   push:
@@ -19,12 +19,7 @@ jobs:
           restore-keys: |
             ${{ runner.os }}-gems-
 
-      # Use GitHub Deploy Action to build and deploy to Github
-      - uses: jeffreytse/jekyll-deploy-action@v0.1.0
-        with:
-          provider: 'github'
-          auth_token: ${{ secrets.GITHUB_TOKEN }}
-          repository: 'https://github.com/SalGnt/Travelogue'
-          branch: 'gh-pages'
-          jekyll_src: './'
-          jekyll_cfg: '_config.yml'
+      # Standard usage
+      - uses:  helaili/jekyll-action@2.0.3
+        env:
+          JEKYLL_PAT: ${{ secrets.GITHUB_TOKEN }}

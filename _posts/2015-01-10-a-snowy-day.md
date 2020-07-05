@@ -3,10 +3,10 @@ layout: post
 title: "A Snowy Day"
 date: 2015-01-10
 backgrounds:
-    - {{site.baseurl}}/assets/demo/on-the-road.jpeg
-    - {{site.baseurl}}/assets/demo/freezing.jpeg
-    - {{site.baseurl}}/assets/demo/village.jpeg
-thumb: {{site.baseurl}}/assets/demo/thumbs/peak.jpeg
+    - /Travelogue/assets/demo/on-the-road.jpeg
+    - /Travelogue/assets/demo/freezing.jpeg
+    - /Travelogue/assets/demo/village.jpeg
+thumb: /Travelogue/assets/demo/thumbs/peak.jpeg
 category: photography
 tags: mountain snow nature
 ---

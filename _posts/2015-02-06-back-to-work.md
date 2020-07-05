@@ -3,9 +3,9 @@ layout: post
 title: "Back to Work"
 date: 2015-02-06
 backgrounds:
-    - {{site.baseurl}}/assets/demo/code-screen.jpg
-    - {{site.baseurl}}/assets/demo/the-desk.jpg
-thumb: {{site.baseurl}}/assets/demo/thumbs/coding.jpg
+    - /Travelogue/assets/demo/code-screen.jpg
+    - /Travelogue/assets/demo/the-desk.jpg
+thumb: /Travelogue/assets/demo/thumbs/coding.jpg
 categories: development work
 tags: home work office coding design
 ---

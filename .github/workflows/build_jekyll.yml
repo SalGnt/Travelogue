@@ -1,0 +1,26 @@
+name: Build Jekyll and Deploy to GitHub Pages
+
+on:
+  push:
+    branches:
+      - master
+
+jobs:
+  build_and_deploy:
+    runs-on: ubuntu-20.04
+    steps:
+      - uses: actions/checkout@v2
+
+      # Use GitHub Actions' cache to cache dependencies on servers
+      - uses: actions/cache@v1
+        with:
+          path: vendor/bundle
+          key: ${{ runner.os }}-gems-${{ hashFiles('**/Gemfile.lock') }}
+          restore-keys: |
+            ${{ runner.os }}-gems-
+
+      # Use GitHub Deploy Action to build and deploy to Github
+      - uses: jeffreytse/jekyll-deploy-action@v0.1.0
+        with:
+          provider: 'github'
+          auth_token: ${{ secrets.GITHUB_TOKEN }}
